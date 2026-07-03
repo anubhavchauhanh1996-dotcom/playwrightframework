@@ -1,0 +1,3 @@
+use: {
+  browserName: 'chromium'
+}
