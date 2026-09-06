@@ -1,0 +1,4 @@
+TCName,title,username,password,lastname,company
+verify_valid_login_TC02,,admin,admin,,
+verify_Invalid_login_TC01,,admin,admin2,,
+create_lead_with_mandatory_fields_TC03,,admin,admin,modi,BJPM

@@ -1,0 +1,17 @@
+{
+  "verify_valid_login_TC02": {
+    "username": "admin",
+    "password": "admin"
+  },
+  "verify_Invalid_login_TC01": {
+    "username": "admin",
+    "password": "admin",
+    "expectedError": "You must specify a valid username and password."
+  },
+  "create_lead_with_mandatory_fields_TC03": {
+    "username": "admin",
+    "password": "admin",
+    "lastname": "modi",
+    "company": "BJP"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@types/node": "^26.4.0"
+  },
+  "dependencies": {
+    "csv-parser": "^3.2.1",
+    "fs": "^0.0.1-security",
+    "xlsx": "^0.18.5"
+  }
+}
