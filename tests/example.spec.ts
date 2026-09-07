@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import {url} from './methods.spec'
-import {Calc} from './utilities/calc'
+import {url} from '../utilities/methods'
+import {Calc} from '../utilities/calc'
 
 test('has title', async ({ page }) => {
   await page.goto(url);
@@ -28,7 +28,7 @@ test('this is first test',async ({ page }) => {
 
 });
 
-test('this is first test 2',async ({ page }) => {
+test('@SMOKE this is first test 2',async ({ page }) => {
 
   await page.goto('http://localhost:100');
   await expect(page).toHaveTitle('vtiger CRM - Commercial Open Source CRM');

@@ -2,9 +2,9 @@ import { test, expect } from '@playwright/test';
 import { getTestData } from '../utilities/jsonReader';
 import { getExcelTestData } from '../utilities/excelReader';
 import { getCSVTestData } from '../utilities/csvReader'
-import { LoginPage } from './pages/LoginPage';
-import { HomePage } from './pages/HomePage';
-import { LeadPage } from './pages/LeadPage';
+import { LoginPage } from '../pages/LoginPage';
+import { HomePage } from '../pages/HomePage';
+import { LeadPage } from '../pages/LeadPage';
 
 
 test('verify_Invalid_login_TC01', async ({ page }) => {
