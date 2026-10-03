@@ -1,0 +1,859 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\codegenVtiger.spec.ts >> test
+- Location: tests\codegenVtiger.spec.ts:3:5
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: locator('td').filter({ hasText: /^Rajnikant$/ })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "soft toBeVisible" locator('td').filter({ hasText: /^Rajnikant$/ }) with timeout 5000ms
+  - waiting for locator('td').filter({ hasText: /^Rajnikant$/ })
+
+```
+
+```yaml
+- table:
+  - rowgroup:
+    - row "vigercrm Welcome admin [2026-10-03 15:50] My Account Settings Help We are? Logout Home Calendar Activities Leads Accounts Contacts Potentials Products Notes Emails HelpDesk Dashboard Quotes Orders Invoice RSS Reports":
+      - cell "vigercrm":
+        - link "vigercrm":
+          - /url: http://www.vtiger.com
+          - img "vigercrm"
+      - cell "Welcome admin [2026-10-03 15:50] My Account Settings Help We are? Logout Home Calendar Activities Leads Accounts Contacts Potentials Products Notes Emails HelpDesk Dashboard Quotes Orders Invoice RSS Reports":
+        - table:
+          - rowgroup:
+            - row "Welcome admin [2026-10-03 15:50] My Account Settings Help We are? Logout":
+              - cell "Welcome admin [2026-10-03 15:50] My Account Settings Help We are? Logout":
+                - table:
+                  - rowgroup:
+                    - row "Welcome admin [2026-10-03 15:50] My Account Settings Help We are? Logout":
+                      - cell "Welcome admin [2026-10-03 15:50]"
+                      - cell "My Account Settings Help We are? Logout":
+                        - link "My Account":
+                          - /url: index.php?module=Users&action=DetailView&record=1
+                          - img
+                          - text: My Account
+                        - link "Settings":
+                          - /url: index.php?module=Settings&action=index
+                          - img
+                          - text: Settings
+                        - link "Help":
+                          - /url: http://www.vtiger.com/products/crm/document.html
+                          - img
+                          - text: Help
+                        - link "We are?":
+                          - /url: javascript:openwin()
+                          - img
+                          - text: We are?
+                        - link "Logout":
+                          - /url: index.php?module=Users&action=Logout
+                          - img
+                          - text: Logout
+                      - cell
+            - row "Home Calendar Activities Leads Accounts Contacts Potentials Products Notes Emails HelpDesk Dashboard Quotes Orders Invoice RSS Reports":
+              - cell "Home Calendar Activities Leads Accounts Contacts Potentials Products Notes Emails HelpDesk Dashboard Quotes Orders Invoice RSS Reports":
+                - table:
+                  - rowgroup:
+                    - row "Home Calendar Activities Leads Accounts Contacts Potentials Products Notes Emails HelpDesk Dashboard Quotes Orders Invoice RSS Reports":
+                      - cell "Home Calendar Activities Leads Accounts Contacts Potentials Products Notes Emails HelpDesk Dashboard Quotes Orders Invoice RSS Reports":
+                        - table:
+                          - rowgroup:
+                            - row "Home Calendar Activities Leads Accounts Contacts Potentials Products Notes Emails HelpDesk Dashboard Quotes Orders Invoice RSS Reports":
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Home":
+                                - link "Home":
+                                  - /url: index.php?module=Home&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Calendar":
+                                - link "Calendar":
+                                  - /url: index.php?module=Calendar&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Activities":
+                                - link "Activities":
+                                  - /url: index.php?module=Activities&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Leads":
+                                - link "Leads":
+                                  - /url: index.php?module=Leads&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Accounts":
+                                - link "Accounts":
+                                  - /url: index.php?module=Accounts&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Contacts":
+                                - link "Contacts":
+                                  - /url: index.php?module=Contacts&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Potentials":
+                                - link "Potentials":
+                                  - /url: index.php?module=Potentials&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Products":
+                                - link "Products":
+                                  - /url: index.php?module=Products&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Notes":
+                                - link "Notes":
+                                  - /url: index.php?module=Notes&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Emails":
+                                - link "Emails":
+                                  - /url: index.php?module=Emails&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "HelpDesk":
+                                - link "HelpDesk":
+                                  - /url: index.php?module=HelpDesk&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Dashboard":
+                                - link "Dashboard":
+                                  - /url: index.php?module=Dashboard&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Quotes":
+                                - link "Quotes":
+                                  - /url: index.php?module=Quotes&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Orders":
+                                - link "Orders":
+                                  - /url: index.php?module=Orders&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Invoice":
+                                - link "Invoice":
+                                  - /url: index.php?module=Invoice&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "RSS":
+                                - link "RSS":
+                                  - /url: index.php?module=Rss&action=index
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+                              - cell "Reports":
+                                - link "Reports":
+                                  - /url: index.php?module=Reports&action=index
+                              - cell:
+                                - img
+                      - cell:
+                        - table:
+                          - rowgroup:
+                            - row:
+                              - cell:
+                                - img
+                              - cell:
+                                - img
+- table:
+  - rowgroup:
+    - row:
+      - cell
+    - row "New Contact | New Lead | New Account | New Potential | New Ticket | New FAQ | New Product | New Note | New Email | New Event |":
+      - cell
+      - cell "New Contact | New Lead | New Account | New Potential | New Ticket | New FAQ | New Product | New Note | New Email | New Event |":
+        - table:
+          - rowgroup:
+            - row "New Contact | New Lead | New Account | New Potential | New Ticket | New FAQ | New Product | New Note | New Email | New Event |":
+              - cell "New Contact":
+                - link "New Contact":
+                  - /url: index.php?module=Contacts&action=EditView&return_module=Contacts&return_action=DetailView
+              - cell "|"
+              - cell "New Lead":
+                - link "New Lead":
+                  - /url: index.php?module=Leads&action=EditView&return_module=Leads&return_action=DetailView
+              - cell "|"
+              - cell "New Account":
+                - link "New Account":
+                  - /url: index.php?module=Accounts&action=EditView&return_module=Accounts&return_action=DetailView
+              - cell "|"
+              - cell "New Potential":
+                - link "New Potential":
+                  - /url: index.php?module=Potentials&action=EditView&return_module=Potentials&return_action=DetailView
+              - cell "|"
+              - cell "New Ticket":
+                - link "New Ticket":
+                  - /url: index.php?module=HelpDesk&action=EditView&return_module=HelpDesk&return_action=DetailView
+              - cell "|"
+              - cell "New FAQ":
+                - link "New FAQ":
+                  - /url: index.php?module=Faq&action=EditView&return_module=Faq&return_action=DetailView
+              - cell "|"
+              - cell "New Product":
+                - link "New Product":
+                  - /url: index.php?module=Products&action=EditView&return_module=Products&return_action=DetailView
+              - cell "|"
+              - cell "New Note":
+                - link "New Note":
+                  - /url: index.php?module=Notes&action=EditView&return_module=Notes&return_action=DetailView
+              - cell "|"
+              - cell "New Email":
+                - link "New Email":
+                  - /url: index.php?module=Emails&action=EditView&return_module=Emails&return_action=DetailView
+              - cell "|"
+              - cell "New Event":
+                - link "New Event":
+                  - /url: index.php?module=Activities&action=EditView&return_module=Activities&return_action=DetailView&activity_mode=Events
+              - cell "|"
+              - cell:
+                - link:
+                  - /url: "#"
+                  - img
+- table:
+  - rowgroup:
+    - row:
+      - cell "Search Search Last Viewed Leads Modi Leads Modi Leads Modi Leads modi Leads modi World Clock Local time October 3, 2026 3:50 PM PM 3 4 5 6 7 8 9 10 11 12 1 2 Calculator M CE C 1/x sqrt +/- % MC 7 8 9 / MR 4 5 6 x M- 1 2 3 - M+ 0 . = +":
+        - table:
+          - rowgroup:
+            - row "Search":
+              - cell "Search"
+              - cell:
+                - img
+        - table:
+          - rowgroup:
+            - row "Search":
+              - cell "Search":
+                - textbox
+                - button "Search"
+        - table:
+          - rowgroup:
+            - row "Last Viewed":
+              - cell "Last Viewed"
+              - cell:
+                - img
+              - cell:
+                - img
+        - table:
+          - rowgroup:
+            - row "Leads Modi Leads Modi Leads Modi Leads modi Leads modi":
+              - cell "Leads Modi Leads Modi Leads Modi Leads modi Leads modi":
+                - table:
+                  - rowgroup:
+                    - row "Leads Modi":
+                      - cell "Leads":
+                        - img "Leads"
+                      - cell "Modi":
+                        - link "Modi":
+                          - /url: index.php?module=Leads&action=DetailView&record=112
+                    - row "Leads Modi":
+                      - cell "Leads":
+                        - img "Leads"
+                      - cell "Modi":
+                        - link "Modi":
+                          - /url: index.php?module=Leads&action=DetailView&record=111
+                    - row "Leads Modi":
+                      - cell "Leads":
+                        - img "Leads"
+                      - cell "Modi":
+                        - link "Modi":
+                          - /url: index.php?module=Leads&action=DetailView&record=110
+                    - row "Leads modi":
+                      - cell "Leads":
+                        - img "Leads"
+                      - cell "modi":
+                        - link "modi":
+                          - /url: index.php?module=Leads&action=DetailView&record=109
+                    - row "Leads modi":
+                      - cell "Leads":
+                        - img "Leads"
+                      - cell "modi":
+                        - link "modi":
+                          - /url: index.php?module=Leads&action=DetailView&record=108
+                    - row:
+                      - cell:
+                        - img
+        - table:
+          - rowgroup:
+            - row "World Clock":
+              - cell "World Clock"
+              - cell:
+                - img
+              - cell:
+                - img
+        - table:
+          - rowgroup:
+            - row "Local time October 3, 2026 3:50 PM PM 3 4 5 6 7 8 9 10 11 12 1 2":
+              - cell "Local time October 3, 2026 3:50 PM PM 3 4 5 6 7 8 9 10 11 12 1 2":
+                - combobox:
+                  - option "Local time" [selected]
+                  - option "Afghanistan"
+                  - option "Algeria"
+                  - option "Argentina"
+                  - option "Australia - Adelaide"
+                  - option "Australia - Perth"
+                  - option "Australia - Sydney"
+                  - option "Austria"
+                  - option "Bahrain"
+                  - option "Bangladesh"
+                  - option "Belgium"
+                  - option "Bolivia"
+                  - option "Brazil - Andes"
+                  - option "Brazil - East"
+                  - option "Brazil - West"
+                  - option "Bulgaria"
+                  - option "Burma (Myanmar)"
+                  - option "Chile"
+                  - option "Canada - Calgary"
+                  - option "Canada - Newfoundland"
+                  - option "Canada - Nova Scotia"
+                  - option "Canada - Toronto"
+                  - option "Canada - Vancouver"
+                  - option "Canada - Winnipeg"
+                  - option "China - Mainland"
+                  - option "China - Taiwan"
+                  - option "Colombia"
+                  - option "Cuba"
+                  - option "Denmark"
+                  - option "Ecuador"
+                  - option "Egypt"
+                  - option "Fiji"
+                  - option "Finland"
+                  - option "France"
+                  - option "Germany"
+                  - option "Ghana"
+                  - option "Greece"
+                  - option "Greenland"
+                  - option "Hungary"
+                  - option "India"
+                  - option "Indonesia - Bali, Borneo"
+                  - option "Indonesia - Irian Jaya"
+                  - option "Indonesia - Sumatra, Java"
+                  - option "Iran"
+                  - option "Iraq"
+                  - option "Israel"
+                  - option "Italy"
+                  - option "Jamaica"
+                  - option "Japan"
+                  - option "Kenya"
+                  - option "Korea (North & South)"
+                  - option "Kuwait"
+                  - option "Libya"
+                  - option "Malaysia"
+                  - option "Maldives"
+                  - option "Mali"
+                  - option "Mauritius"
+                  - option "Mexico"
+                  - option "Morocco"
+                  - option "Nepal"
+                  - option "Netherlands"
+                  - option "New Zealand"
+                  - option "Nigeria"
+                  - option "Norway"
+                  - option "Oman"
+                  - option "Pakistan"
+                  - option "Peru"
+                  - option "Philippines"
+                  - option "Poland"
+                  - option "Portugal"
+                  - option "Qatar"
+                  - option "Romania"
+                  - option "Russia - Kamchatka"
+                  - option "Russia - Moscow"
+                  - option "Russia - Vladivostok"
+                  - option "Seychelles"
+                  - option "Saudi Arabia"
+                  - option "Singapore"
+                  - option "South Africa"
+                  - option "Spain"
+                  - option "Syria"
+                  - option "Sri Lanka"
+                  - option "Sweden"
+                  - option "Switzerland"
+                  - option "Thailand"
+                  - option "Tonga"
+                  - option "Turkey"
+                  - option "Ukraine"
+                  - option "Uzbekistan"
+                  - option "Vietnam"
+                  - option "UAE"
+                  - option "UK"
+                  - option "USA - Alaska"
+                  - option "USA - Arizona"
+                  - option "USA - Central"
+                  - option "USA - Eastern"
+                  - option "USA - Hawaii"
+                  - option "USA - Indiana East"
+                  - option "USA - Mountain"
+                  - option "USA - Pacific"
+                  - option "Yemen"
+                  - option "Yugoslavia"
+                  - option "Zambia"
+                  - option "Zimbabwe"
+                - text: October 3, 2026 3:50 PM PM 3 4 5 6 7 8 9 10 11 12 1 2
+        - table:
+          - rowgroup:
+            - row "Calculator":
+              - cell "Calculator"
+              - cell:
+                - img
+              - cell:
+                - img
+        - table:
+          - rowgroup:
+            - row "M CE C 1/x sqrt +/- % MC 7 8 9 / MR 4 5 6 x M- 1 2 3 - M+ 0 . = +":
+              - cell "M CE C 1/x sqrt +/- % MC 7 8 9 / MR 4 5 6 x M- 1 2 3 - M+ 0 . = +":
+                - table:
+                  - rowgroup:
+                    - row "M CE C 1/x sqrt +/- % MC 7 8 9 / MR 4 5 6 x M- 1 2 3 - M+ 0 . = +":
+                      - cell "M CE C 1/x sqrt +/- % MC 7 8 9 / MR 4 5 6 x M- 1 2 3 - M+ 0 . = +":
+                        - table:
+                          - rowgroup:
+                            - row:
+                              - cell
+                            - row "M":
+                              - cell "M":
+                                - table:
+                                  - rowgroup:
+                                    - row "M":
+                                      - cell "M":
+                                        - table:
+                                          - rowgroup:
+                                            - row "M":
+                                              - cell "M":
+                                                - textbox: M
+                                              - cell:
+                                                - textbox
+                            - row "CE C":
+                              - cell
+                              - cell "CE":
+                                - button "CE"
+                              - cell "C":
+                                - button "C"
+                            - row "1/x sqrt +/- %":
+                              - cell:
+                                - button
+                              - cell "1/x":
+                                - button "1/x"
+                              - cell "sqrt":
+                                - button "sqrt"
+                              - cell "+/-":
+                                - button "+/-"
+                              - cell "%":
+                                - button "%"
+                            - row "MC 7 8 9 /":
+                              - cell "MC":
+                                - button "MC"
+                              - cell "7":
+                                - button "7"
+                              - cell "8":
+                                - button "8"
+                              - cell "9":
+                                - button "9"
+                              - cell /:
+                                - button /
+                            - row "MR 4 5 6 x":
+                              - cell "MR":
+                                - button "MR"
+                              - cell "4":
+                                - button "4"
+                              - cell "5":
+                                - button "5"
+                              - cell "6":
+                                - button "6"
+                              - cell "x":
+                                - button "x"
+                            - row "M- 1 2 3 -":
+                              - cell "M-":
+                                - button "M-"
+                              - cell "1":
+                                - button "1"
+                              - cell "2":
+                                - button "2"
+                              - cell "3":
+                                - button "3"
+                              - cell "-":
+                                - button "-"
+                            - row "M+ 0 . = +":
+                              - cell "M+":
+                                - button "M+"
+                              - cell "0":
+                                - button "0"
+                              - cell ".":
+                                - button "."
+                              - cell "=":
+                                - button "="
+                              - cell "+":
+                                - button "+"
+      - 'cell "Lead: Modi [ Print ] [ Help ] Edit Duplicate Delete Convert Lead Send Mail Select template to Mail Merge: Merge Lead Information First Name: Phone: Last Name: Modi Mobile: Company: BJP Fax: Designation: Email: Lead Source: Website: Industry: Lead Status: Annual Revenue: Rating: No Of Employees: Assigned ToUser : admin Yahoo Id: Created Time: 2026-10-03 15:50:01 Modified Time: 2026-10-03 15:50:01 Address Information Street: Postal Code: City: Country: State: Description Information Description: Activities New Task New Event None Scheduled Emails New Email None Scheduled History None Scheduled Attachments & Notes New Attachment New Note None Scheduled Products New Product None Scheduled"':
+        - table:
+          - rowgroup:
+            - 'row "Lead: Modi [ Print ] [ Help ]"':
+              - cell:
+                - img
+              - 'cell "Lead: Modi"'
+              - cell "[ Print ]":
+                - text: "["
+                - link "Print":
+                  - /url: phprint.php?jt=03484cdc1639655f08998518f4b81b24&module=Leads&action=DetailView&record=112&lang_crm=en_us
+                - text: "]"
+              - cell "[ Help ]":
+                - text: "["
+                - link "Help":
+                  - /url: http://www.vtiger.com/products/crm/document.html
+                - text: "]"
+            - row:
+              - cell:
+                - img
+        - table:
+          - rowgroup:
+            - 'row "Edit Duplicate Delete Convert Lead Send Mail Select template to Mail Merge: Merge"':
+              - cell
+              - cell "Edit Duplicate Delete Convert Lead Send Mail":
+                - table:
+                  - rowgroup:
+                    - row "Edit Duplicate Delete Convert Lead Send Mail":
+                      - cell "Edit":
+                        - button "Edit"
+                      - cell "Duplicate":
+                        - button "Duplicate"
+                      - cell "Delete":
+                        - button "Delete"
+                      - cell "Convert Lead":
+                        - button "Convert Lead"
+                      - cell "Send Mail":
+                        - button "Send Mail"
+              - 'cell "Select template to Mail Merge: Merge"':
+                - text: "Select template to Mail Merge:"
+                - combobox
+                - button "Merge"
+        - table:
+          - rowgroup:
+            - 'row "Lead Information First Name: Phone: Last Name: Modi Mobile: Company: BJP Fax: Designation: Email: Lead Source: Website: Industry: Lead Status: Annual Revenue: Rating: No Of Employees: Assigned ToUser : admin Yahoo Id: Created Time: 2026-10-03 15:50:01 Modified Time: 2026-10-03 15:50:01"':
+              - 'cell "Lead Information First Name: Phone: Last Name: Modi Mobile: Company: BJP Fax: Designation: Email: Lead Source: Website: Industry: Lead Status: Annual Revenue: Rating: No Of Employees: Assigned ToUser : admin Yahoo Id: Created Time: 2026-10-03 15:50:01 Modified Time: 2026-10-03 15:50:01"':
+                - table:
+                  - rowgroup:
+                    - row "Lead Information"
+                - table:
+                  - rowgroup:
+                    - 'row "First Name: Phone:"':
+                      - cell "First Name:"
+                      - cell
+                      - cell "Phone:"
+                      - cell
+                    - 'row "Last Name: Modi Mobile:"':
+                      - cell "Last Name:"
+                      - cell "Modi"
+                      - cell "Mobile:"
+                      - cell
+                    - 'row "Company: BJP Fax:"':
+                      - cell "Company:"
+                      - cell "BJP"
+                      - cell "Fax:"
+                      - cell
+                    - 'row "Designation: Email:"':
+                      - cell "Designation:"
+                      - cell
+                      - cell "Email:"
+                      - cell:
+                        - link:
+                          - /url: "mailto:"
+                    - 'row "Lead Source: Website:"':
+                      - cell "Lead Source:"
+                      - cell
+                      - cell "Website:"
+                      - cell:
+                        - link:
+                          - /url: http://
+                    - 'row "Industry: Lead Status:"':
+                      - cell "Industry:"
+                      - cell
+                      - cell "Lead Status:"
+                      - cell
+                    - 'row "Annual Revenue: Rating:"':
+                      - cell "Annual Revenue:"
+                      - cell
+                      - cell "Rating:"
+                      - cell
+                    - 'row "No Of Employees: Assigned ToUser : admin"':
+                      - cell "No Of Employees:"
+                      - cell
+                      - cell "Assigned ToUser :"
+                      - cell "admin":
+                        - link "admin":
+                          - /url: index.php?module=Users&action=DetailView&record=1
+                    - 'row "Yahoo Id: Created Time: 2026-10-03 15:50:01"':
+                      - cell "Yahoo Id:"
+                      - cell:
+                        - link:
+                          - /url: "mailto:"
+                      - cell "Created Time:"
+                      - cell "2026-10-03 15:50:01"
+                    - 'row "Modified Time: 2026-10-03 15:50:01"':
+                      - cell "Modified Time:"
+                      - cell "2026-10-03 15:50:01"
+        - table:
+          - rowgroup:
+            - 'row "Address Information Street: Postal Code: City: Country: State:"':
+              - 'cell "Address Information Street: Postal Code: City: Country: State:"':
+                - table:
+                  - rowgroup:
+                    - row "Address Information"
+                - table:
+                  - rowgroup:
+                    - 'row "Street: Postal Code:"':
+                      - cell "Street:"
+                      - cell
+                      - cell "Postal Code:"
+                      - cell
+                    - 'row "City: Country:"':
+                      - cell "City:"
+                      - cell
+                      - cell "Country:"
+                      - cell
+                    - row "State:":
+                      - cell "State:"
+                      - cell
+        - table:
+          - rowgroup:
+            - row "Description Information Description:":
+              - cell "Description Information Description:":
+                - table:
+                  - rowgroup:
+                    - row "Description Information"
+                - table:
+                  - rowgroup:
+                    - row "Description:":
+                      - cell "Description:"
+                      - cell
+        - table:
+          - rowgroup:
+            - row "Activities New Task New Event":
+              - cell "Activities":
+                - table:
+                  - rowgroup:
+                    - row "Activities":
+                      - cell "Activities"
+              - cell:
+                - img
+              - cell "New Task New Event":
+                - table:
+                  - rowgroup:
+                    - row "New Task New Event":
+                      - cell "New Task New Event":
+                        - button "New Task"
+                        - button "New Event"
+        - text: None Scheduled
+        - table:
+          - rowgroup:
+            - row "Emails New Email":
+              - cell "Emails":
+                - table:
+                  - rowgroup:
+                    - row "Emails":
+                      - cell "Emails"
+              - cell:
+                - img
+              - cell "New Email":
+                - table:
+                  - rowgroup:
+                    - row "New Email":
+                      - cell "New Email":
+                        - button "New Email"
+        - text: None Scheduled
+        - table:
+          - rowgroup:
+            - row "History":
+              - cell "History":
+                - table:
+                  - rowgroup:
+                    - row "History":
+                      - cell "History"
+              - cell:
+                - img
+        - text: None Scheduled
+        - table:
+          - rowgroup:
+            - row "Attachments & Notes New Attachment New Note":
+              - cell "Attachments & Notes":
+                - table:
+                  - rowgroup:
+                    - row "Attachments & Notes":
+                      - cell "Attachments & Notes"
+              - cell:
+                - img
+              - cell "New Attachment New Note":
+                - table:
+                  - rowgroup:
+                    - row "New Attachment New Note":
+                      - cell "New Attachment New Note":
+                        - button "New Attachment"
+                        - button "New Note"
+        - text: None Scheduled
+        - table:
+          - rowgroup:
+            - row "Products New Product":
+              - cell "Products":
+                - table:
+                  - rowgroup:
+                    - row "Products":
+                      - cell "Products"
+              - cell:
+                - img
+              - cell "New Product":
+                - table:
+                  - rowgroup:
+                    - row "New Product":
+                      - cell "New Product":
+                        - button "New Product"
+        - text: None Scheduled
+    - row "Home | Dashboard | Leads | Contacts | Accounts | Potentials | Notes | Emails | Activities | HelpDesk | Products | Calendar Quotes | Orders | Invoice | RSS | Reports":
+      - cell "Home | Dashboard | Leads | Contacts | Accounts | Potentials | Notes | Emails | Activities | HelpDesk | Products | Calendar Quotes | Orders | Invoice | RSS | Reports":
+        - table:
+          - rowgroup:
+            - row "Home | Dashboard | Leads | Contacts | Accounts | Potentials | Notes | Emails | Activities | HelpDesk | Products | Calendar Quotes | Orders | Invoice | RSS | Reports":
+              - cell "Home | Dashboard | Leads | Contacts | Accounts | Potentials | Notes | Emails | Activities | HelpDesk | Products | Calendar Quotes | Orders | Invoice | RSS | Reports":
+                - link "Home":
+                  - /url: index.php?module=Home&action=index
+                - text: "|"
+                - link "Dashboard":
+                  - /url: index.php?module=Dashboard&action=index
+                - text: "|"
+                - link "Leads":
+                  - /url: index.php?module=Leads&action=index
+                - text: "|"
+                - link "Contacts":
+                  - /url: index.php?module=Contacts&action=index
+                - text: "|"
+                - link "Accounts":
+                  - /url: index.php?module=Accounts&action=index
+                - text: "|"
+                - link "Potentials":
+                  - /url: index.php?module=Potentials&action=index
+                - text: "|"
+                - link "Notes":
+                  - /url: index.php?module=Notes&action=index
+                - text: "|"
+                - link "Emails":
+                  - /url: index.php?module=Emails&action=index
+                - text: "|"
+                - link "Activities":
+                  - /url: index.php?module=Activities&action=index
+                - text: "|"
+                - link "HelpDesk":
+                  - /url: index.php?module=HelpDesk&action=index
+                - text: "|"
+                - link "Products":
+                  - /url: index.php?module=Products&action=index
+                - text: "|"
+                - link "Calendar":
+                  - /url: index.php?module=Calendar&action=index
+                - link "Quotes":
+                  - /url: index.php?module=Quotes&action=index
+                - text: "|"
+                - link "Orders":
+                  - /url: index.php?module=Orders&action=index
+                - text: "|"
+                - link "Invoice":
+                  - /url: index.php?module=Invoice&action=index
+                - text: "|"
+                - link "RSS":
+                  - /url: index.php?module=Rss&action=index
+                - text: "|"
+                - link "Reports":
+                  - /url: index.php?module=Reports&action=index
+- table:
+  - rowgroup:
+    - 'row "© This software is a collective work consisting of the following major Open Source components: Apache software, MySQL server, PHP, SugarCRM, phpBB, TUTOS, phpSysinfo, SquirrelMail, and PHPMailer each licensed under a separate Open Source License. vtiger.com is not affiliated with nor endorsed by any of the above providers. See Copyrights for details."':
+      - 'cell "© This software is a collective work consisting of the following major Open Source components: Apache software, MySQL server, PHP, SugarCRM, phpBB, TUTOS, phpSysinfo, SquirrelMail, and PHPMailer each licensed under a separate Open Source License. vtiger.com is not affiliated with nor endorsed by any of the above providers. See Copyrights for details."':
+        - table:
+          - rowgroup:
+            - 'row "© This software is a collective work consisting of the following major Open Source components: Apache software, MySQL server, PHP, SugarCRM, phpBB, TUTOS, phpSysinfo, SquirrelMail, and PHPMailer each licensed under a separate Open Source License. vtiger.com is not affiliated with nor endorsed by any of the above providers. See Copyrights for details."':
+              - 'cell "© This software is a collective work consisting of the following major Open Source components: Apache software, MySQL server, PHP, SugarCRM, phpBB, TUTOS, phpSysinfo, SquirrelMail, and PHPMailer each licensed under a separate Open Source License. vtiger.com is not affiliated with nor endorsed by any of the above providers. See Copyrights for details."':
+                - text: "© This software is a collective work consisting of the following major Open Source components: Apache software, MySQL server, PHP, SugarCRM, phpBB, TUTOS, phpSysinfo, SquirrelMail, and PHPMailer each licensed under a separate Open Source License. vtiger.com is not affiliated with nor endorsed by any of the above providers. See"
+                - link "Copyrights":
+                  - /url: http://www.vtiger.com/copyrights/LICENSE_AGREEMENT.txt
+                - text: for details.
+- table:
+  - rowgroup:
+    - 'row "Server response time: 0.159336 seconds."':
+      - 'cell "Server response time: 0.159336 seconds."'
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('test', async ({ page }) => {
+  4  |   await page.goto('http://localhost:100/');
+  5  |   await page.locator('input[name="user_name"]').click();
+  6  |   await page.locator('input[name="user_name"]').fill('admin');
+  7  |   await page.locator('input[name="user_name"]').press('Tab');
+  8  |   await page.locator('input[name="user_password"]').fill('admin');
+  9  |   await page.locator('select[name="login_theme"]').selectOption('orange');
+  10 |   await expect.soft(page.getByRole('img').nth(2)).toBeVisible();
+  11 |   await page.getByRole('button', { name: 'Login' }).click();
+  12 |   await page.locator('#tabcontent').getByRole('link', { name: 'Leads' }).click();
+  13 |   await page.getByRole('link', { name: 'New Lead' }).click();
+  14 |   await page.locator('input[name="lastname"]').click();
+  15 |   await page.locator('input[name="lastname"]').fill('Modi');
+  16 |   await page.locator('input[name="lastname"]').press('ArrowDown');
+  17 |   await page.locator('input[name="lastname"]').press('Tab');
+  18 |   await page.locator('input[name="mobile"]').press('Tab');
+  19 |   await page.locator('input[name="company"]').fill('BJP');
+  20 |   await page.locator('input[name="company"]').press('Tab');
+  21 |   await page.locator('input[name="fax"]').press('Tab');
+  22 |   await page.locator('input[name="designation"]').press('Tab');
+  23 |   await page.locator('input[name="email"]').press('Tab');
+  24 |   await page.getByRole('button', { name: 'Save' }).first().click();
+> 25 |   await expect.soft(page.locator('td').filter({ hasText: /^Rajnikant$/ })).toBeVisible();
+     |                                                                            ^ Error: expect(locator).toBeVisible() failed
+  26 | });
+```
